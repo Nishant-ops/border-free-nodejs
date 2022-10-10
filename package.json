@@ -12,7 +12,6 @@
   "license": "ISC",
   "dependencies": {
     "babel-preset-react": "^6.24.1",
-    "build": "react-scripts build",
     "cors": "^2.8.5",
     "corss": "^2.8.5",
     "csv-parser": "^3.0.0",

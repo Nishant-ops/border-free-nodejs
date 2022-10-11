@@ -12,7 +12,14 @@ fs.createReadStream(req.file.path)
 .pipe(csv({}))
 .on('data',async function(row)
 {
-  const images=row['Images']?row['Images']:row['productImages'];
+  let images=row['Images']?row['Images']:row['productImages'];
+ 
+  if(images!==undefined)
+  {
+  let productImage=images.split(",");
+  console.log(productImage[0]);
+  images=productImage[0];
+  }
   //let productImage=images.split(',').at(0);
  // console.log(productImage);
   const product={
